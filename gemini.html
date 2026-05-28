@@ -315,15 +315,6 @@
             document.getElementById('modal-title').innerText = `${currentMethod} 收银台`;
             document.getElementById('modal-price').innerText = `¥${currentPrice}`;
             
-            const qrBox = document.getElementById('qrcode-color');
-            if(currentMethod === '微信支付') {
-                qrBox.style.background = '#22c55e';
-                qrBox.style.color = 'white';
-            } else {
-                qrBox.style.background = '#3b82f6';
-                qrBox.style.color = 'white';
-            }
-
             // 显示弹窗
             modal.style.display = 'flex';
         });
