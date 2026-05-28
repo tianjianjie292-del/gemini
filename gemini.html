@@ -274,7 +274,7 @@
     <script>
         // 前端交互 JavaScript 逻辑
         const planCards = document.querySelectorAll('.plan-card');
-        const payBtns = document.querySelectorAll('.pay-btn');
+       
         const submitBtn = document.getElementById('pay-now');
         const modal = document.getElementById('pay-modal');
         const closeModalBtn = document.getElementById('close-btn');
@@ -292,14 +292,7 @@
             });
         });
 
-        // 切换支付方式
-        payBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                payBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentMethod = btn.getAttribute('data-method');
-            });
-        });
+      
 
         // 点击立即支付（模拟将数据传给后端并弹出支付码）
         submitBtn.addEventListener('click', () => {
